@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Text, View, TextInput, ScrollView, StyleSheet} from 'react-native';
 import {Colors} from '../../constants/colors';
+import ImagePickers from './ImagePickers';
+import LocationPicker from './LocationPicker';
 
 function PlaceForm() {
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -19,6 +21,8 @@ function PlaceForm() {
           value={enteredTitle}
         />
       </View>
+      <ImagePickers />
+      <LocationPicker />
     </ScrollView>
   );
 }
@@ -26,7 +30,9 @@ function PlaceForm() {
 const styles = StyleSheet.create({
   form: {
     flex: 1,
-    padding: 24,
+    //padding: 24,
+    paddingHorizontal:24,
+    
   },
   label: {
     fontWeight: 'bold',
